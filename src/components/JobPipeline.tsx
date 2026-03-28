@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, DollarSign, Users, MoreHorizontal, ExternalLink, Video, FileCheck } from 'lucide-react';
+import { useParams, Link } from 'react-router-dom';
+import { MapPin, DollarSign, Users, MoreHorizontal, ExternalLink, Video, FileCheck, ArrowLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function JobPipeline() {
+  const { id } = useParams();
+
   const stages = [
     {
       name: 'Screening',
@@ -40,12 +42,18 @@ export default function JobPipeline() {
 
   return (
     <div className="space-y-10">
+      {/* Back Button */}
+      <Link to="/jobs" className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">
+        <ArrowLeft className="w-4 h-4" />
+        Back to Jobs
+      </Link>
+
       {/* Job Header */}
       <section className="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <div className="flex items-center gap-2 mb-2">
             <span className="text-[10px] font-bold uppercase tracking-widest text-primary bg-primary-fixed px-2 py-0.5 rounded">Active</span>
-            <span className="text-[10px] font-medium text-on-surface-variant">JOB ID: ATS-PR-2024-082</span>
+            <span className="text-[10px] font-medium text-on-surface-variant uppercase">JOB ID: {id || 'ATS-PR-2024-082'}</span>
           </div>
           <h2 className="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Senior Experience Designer</h2>
           <div className="flex flex-wrap gap-4 text-on-surface-variant text-sm">

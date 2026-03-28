@@ -100,10 +100,10 @@ export default function ApplicantsList() {
                     </Link>
                   </td>
                   <td className="px-6 py-5">
-                    <div className="flex items-center gap-2 text-sm font-medium text-on-surface">
+                    <Link to="/jobs/ATS-PR-2024-082" className="flex items-center gap-2 text-sm font-medium text-on-surface hover:text-primary transition-colors">
                       <Briefcase className="w-4 h-4 text-outline" />
                       {applicant.job}
-                    </div>
+                    </Link>
                   </td>
                   <td className="px-6 py-5">
                     <span className={cn(

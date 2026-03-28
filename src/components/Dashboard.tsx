@@ -62,11 +62,11 @@ export default function Dashboard() {
           transition={{ delay: 0.2 }}
           className="bg-surface-container-low p-8 rounded-3xl flex flex-col justify-between border border-outline-variant/10 hover:bg-surface-bright transition-all"
         >
-          <div>
+          <Link to="/jobs" className="block">
             <Briefcase className="w-6 h-6 text-primary mb-4" />
             <h3 className="text-3xl font-bold tracking-tight">24</h3>
             <p className="text-on-surface-variant text-xs mt-2 font-medium">Open Positions</p>
-          </div>
+          </Link>
           <div className="mt-4 flex -space-x-2">
             {[1, 2, 3].map((i) => (
               <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
