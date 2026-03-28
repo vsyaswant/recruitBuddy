@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", sans-serif;
+
+  --color-primary: #003d9b;
+  --color-primary-container: #0052cc;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #dae2ff;
+  --color-on-primary-fixed: #001848;
+  
+  --color-secondary: #525f73;
+  --color-secondary-container: #d6e3fb;
+  --color-on-secondary-container: #586579;
+  
+  --color-surface: #f8f9fa;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #434654;
+  --color-surface-container: #edeeef;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-container-highest: #e1e3e4;
+  
+  --color-outline: #737685;
+  --color-outline-variant: #c3c6d6;
+  
+  --color-tertiary: #7b2600;
+  --color-tertiary-container: #a33500;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass-panel {
+  background: rgba(248, 249, 250, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.pipeline-gradient {
+  background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
